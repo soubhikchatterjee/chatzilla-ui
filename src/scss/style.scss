@@ -1,0 +1,458 @@
+// Variables
+$text-primary: #4a4f5a;
+$text-primary-light: #bec5cc;
+$logo-bg: #2571a6;
+$logo-color: #ffffff;
+$navbar-bg: #3488bf;
+$navbar-color: #ffffff;
+$sidebar-bg: #2f363e;
+$sidebar-color: #677c94;
+$sidebar-a: #ffffff;
+$sidebar-a-hover: $sidebar-color;
+$middlebar-title-bg: #e0e4ef;
+$middlebar-title-color: #7b889d;
+$middlebar-toolbar-bg: #e0e4ef;
+$middlebar-toolbar-active-bg: #f6f7fb;
+$middlebar-convo-mini-info-bg: #ffffff;
+$middlebar-convo-bg: #ffffff;
+$middlebar-convo-alt-bg: #f6f7fb;
+$middlebar-convo-active-bg: #1476c6;
+$middlebar-convo-archive: #667e9b;
+$middlebar-convo-border: #ccc;
+
+// @import 'node_modules/bootstrap/scss/bootstrap';
+
+// Imports Fonts
+@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee:700|Open+Sans|Roboto|Roboto:100");
+
+:root {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #eceff4;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.avatar-md {
+  width: 6em;
+  height: 6em;
+}
+
+.avatar-sm {
+  width: 4.5em;
+  height: 4.5em;
+}
+
+.avatar-xs {
+  width: 3em;
+  height: 3em;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.status {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-online {
+  background: green;
+}
+
+.status-busy {
+  background: orange;
+}
+
+.status-offline {
+  background: grey;
+}
+
+// Change placeholder font
+.form-control {
+  font-family: "Open Sans", sans-serif;
+}
+.form-control::-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+.form-control:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+.form-control::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  header.main-header {
+    nav {
+      background: $navbar-bg;
+      .logo {
+        width: 15vw;
+        background: $logo-bg;
+        padding: 0.75em 0.35em 0.35em 0.7em;
+
+        span.logo-text {
+          display: block;
+          margin: 0;
+          font-family: "Mukta Mahee", sans-serif;
+          font-size: 1.6vw;
+          color: $logo-color;
+          text-align: center;
+        }
+
+        div.dropdown-menu a {
+          font-family: "Open Sans", sans-serif;
+          font-weight: normal;
+        }
+      }
+      .search-wrapper {
+        margin-top: 1em;
+        margin-left: 1em;
+
+        .search {
+          width: 60vw;
+        }
+
+        .search-autocomplete {
+          z-index: 10;
+          width: 60vw;
+          margin-left: 2.5rem;
+          margin-top: 2.3rem;
+          position: absolute;
+          display: none;
+        }
+      }
+
+      .dropdown-wrapper {
+        .btn-dropdown-messages,
+        .btn-dropdown-user {
+          cursor: pointer;
+          background: $navbar-bg;
+          border: $navbar-bg;
+          color: $navbar-color;
+          font-size: 1.4em;
+        }
+
+        .badge {
+          vertical-align: top;
+          font-size: 0.45em;
+        }
+
+        .font-md {
+          font-size: 1em;
+        }
+
+        .dropdown-profile-wrapper .user-dropdown-profile {
+          text-align: center;
+          width: 15em;
+        }
+      }
+    }
+  }
+
+  aside {
+    .sidebar-wrapper {
+      width: 15vw;
+      height: 95vh;
+
+      background: $sidebar-bg;
+
+      .main-navigation {
+        ul li {
+          font-size: 0.9em;
+          margin-bottom: 5px;
+          color: $sidebar-color;
+
+          a,
+          .show-all:hover {
+            color: $sidebar-a;
+            font-family: "Open Sans", sans-serif;
+          }
+          a:hover,
+          .show-all {
+            color: $sidebar-a-hover;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    #profileModal {
+      header.header-top {
+        background-color: $logo-bg;
+
+        .profile-image {
+          .outer {
+            margin: auto;
+            display: block;
+            border-radius: 100%;
+            width: 7em;
+            height: 7em;
+            background-color: $navbar-bg;
+            .avatar {
+              margin: auto;
+              display: block;
+              position: absolute;
+              margin-top: 8px;
+              margin-left: 8px;
+              border: 5px solid $logo-color;
+            }
+          }
+        }
+
+        .card-body {
+          color: $logo-color;
+          font-family: "Open Sans", sans-serif;
+          text-align: center;
+        }
+      }
+      section.message {
+        background-color: $navbar-bg;
+        p.card-text {
+          font-size: 0.7em;
+          color: $logo-color;
+        }
+      }
+      .list-group,
+      .card-body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.8em;
+      }
+    }
+
+    section.chat-window-mini-info {
+      background: $middlebar-convo-mini-info-bg;
+      color: $text-primary;
+      font-family: "Roboto", sans-serif;
+      border: 1px solid $middlebar-convo-border;
+
+      h2.name {
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+        font-weight: bold;
+      }
+
+      div.subtitle {
+        font-size: 0.7em;
+      }
+    }
+
+    section.conversations-wrapper {
+      height: 81.2vh;
+      overflow: scroll;
+
+      .chat-message {
+        min-height: 1vh;
+        border-radius: 5px;
+        border: 1px solid $middlebar-convo-border;
+        color: $text-primary;
+        background: $middlebar-convo-bg;
+
+        b {
+          font-size: 0.85em;
+        }
+
+        small {
+          padding: 0;
+          color: $text-primary-light;
+        }
+
+        .body {
+          font-size: 0.8em;
+          text-align: justify;
+          font-family: "Noto Sans", sans-serif;
+          font-family: "Roboto", sans-serif;
+        }
+
+        .options {
+          a {
+            font-size: 0.7em;
+            color: $text-primary-light;
+          }
+
+          a:hover {
+            font-size: 0.7em;
+            color: $text-primary;
+          }
+        }
+      }
+    }
+
+    section.message-input-wrapper {
+      background: $middlebar-convo-bg;
+      width: 85vw;
+      padding: 15px;
+      bottom: 0;
+      position: fixed;
+
+      .emoji-menu {
+        top: -230px;
+      }
+    }
+  }
+}
+
+// RESPONSIVE CSS FOLLOWS
+@media (max-width: 575.98px) {
+  .wrapper {
+    header.main-header {
+      nav {
+        .logo {
+          width: 40vw;
+          span.logo-text {
+            font-size: 4vw;
+          }
+        }
+        .search-wrapper {
+          .search {
+            width: 10rem;
+          }
+          .search-autocomplete {
+            width: 10rem;
+          }
+        }
+      }
+    }
+    aside {
+      .sidebar-wrapper {
+        width: 40vw;
+        height: 100%;
+      }
+    }
+    main {
+      section.message-input-wrapper {
+        width: 70vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wrapper {
+    header.main-header {
+      nav {
+        .logo {
+          width: 30vw;
+          span.logo-text {
+            font-size: 3vw;
+          }
+        }
+        .search-wrapper {
+          .search {
+            width: 10rem;
+          }
+          .search-autocomplete {
+            width: 15rem;
+          }
+        }
+      }
+    }
+    aside {
+      .sidebar-wrapper {
+        width: 30vw;
+      }
+    }
+    main {
+      section.message-input-wrapper {
+        width: 70vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wrapper {
+    header.main-header {
+      nav {
+        .logo {
+          width: 25vw;
+          span.logo-text {
+            font-size: 2.5vw;
+          }
+        }
+        .search-wrapper {
+          .search {
+            width: 20rem;
+          }
+          .search-autocomplete {
+            width: 20rem;
+          }
+        }
+      }
+    }
+    aside {
+      .sidebar-wrapper {
+        width: 25vw;
+      }
+    }
+    main {
+      section.message-input-wrapper {
+        width: 75vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .wrapper {
+    header.main-header {
+      nav {
+        .logo {
+          width: 20vw;
+          span.logo-text {
+            font-size: 2vw;
+          }
+        }
+        .search-wrapper {
+          .search {
+            width: 35rem;
+          }
+          .search-autocomplete {
+            width: 35rem;
+          }
+        }
+      }
+    }
+    aside {
+      .sidebar-wrapper {
+        width: 20vw;
+      }
+    }
+    main {
+      section.message-input-wrapper {
+        width: 80vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    main {
+      section.conversations-wrapper {
+        height: 83vh !important;
+      }
+    }
+  }
+}

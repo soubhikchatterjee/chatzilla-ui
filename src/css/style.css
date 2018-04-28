@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee:700|Open+Sans|Roboto|Roboto:100");
+:root {
+  padding: 0;
+  margin: 0; }
+
+html {
+  position: relative; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #eceff4; }
+
+.avatar {
+  border-radius: 50%; }
+
+.avatar-md {
+  width: 6em;
+  height: 6em; }
+
+.avatar-sm {
+  width: 4.5em;
+  height: 4.5em; }
+
+.avatar-xs {
+  width: 3em;
+  height: 3em; }
+
+.pointer {
+  cursor: pointer; }
+
+.hide {
+  display: none; }
+
+.status {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  display: inline-block; }
+
+.status-online {
+  background: green; }
+
+.status-busy {
+  background: orange; }
+
+.status-offline {
+  background: grey; }
+
+.form-control {
+  font-family: "Open Sans", sans-serif; }
+
+.form-control::-moz-placeholder {
+  font-family: "Open Sans", sans-serif; }
+
+.form-control:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif; }
+
+.form-control::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif; }
+
+.wrapper header.main-header nav {
+  background: #3488bf; }
+  .wrapper header.main-header nav .logo {
+    width: 15vw;
+    background: #2571a6;
+    padding: 0.75em 0.35em 0.35em 0.7em; }
+    .wrapper header.main-header nav .logo span.logo-text {
+      display: block;
+      margin: 0;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.6vw;
+      color: #ffffff;
+      text-align: center; }
+    .wrapper header.main-header nav .logo div.dropdown-menu a {
+      font-family: "Open Sans", sans-serif;
+      font-weight: normal; }
+  .wrapper header.main-header nav .search-wrapper {
+    margin-top: 1em;
+    margin-left: 1em; }
+    .wrapper header.main-header nav .search-wrapper .search {
+      width: 60vw; }
+    .wrapper header.main-header nav .search-wrapper .search-autocomplete {
+      z-index: 10;
+      width: 60vw;
+      margin-left: 2.5rem;
+      margin-top: 2.3rem;
+      position: absolute;
+      display: none; }
+  .wrapper header.main-header nav .dropdown-wrapper .btn-dropdown-messages,
+  .wrapper header.main-header nav .dropdown-wrapper .btn-dropdown-user {
+    cursor: pointer;
+    background: #3488bf;
+    border: #3488bf;
+    color: #ffffff;
+    font-size: 1.4em; }
+  .wrapper header.main-header nav .dropdown-wrapper .badge {
+    vertical-align: top;
+    font-size: 0.45em; }
+  .wrapper header.main-header nav .dropdown-wrapper .font-md {
+    font-size: 1em; }
+  .wrapper header.main-header nav .dropdown-wrapper .dropdown-profile-wrapper .user-dropdown-profile {
+    text-align: center;
+    width: 15em; }
+
+.wrapper aside .sidebar-wrapper {
+  width: 15vw;
+  height: 95vh;
+  background: #2f363e; }
+  .wrapper aside .sidebar-wrapper .main-navigation ul li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #677c94; }
+    .wrapper aside .sidebar-wrapper .main-navigation ul li a,
+    .wrapper aside .sidebar-wrapper .main-navigation ul li .show-all:hover {
+      color: #ffffff;
+      font-family: "Open Sans", sans-serif; }
+    .wrapper aside .sidebar-wrapper .main-navigation ul li a:hover,
+    .wrapper aside .sidebar-wrapper .main-navigation ul li .show-all {
+      color: #677c94;
+      text-decoration: none; }
+
+.wrapper main #profileModal header.header-top {
+  background-color: #2571a6; }
+  .wrapper main #profileModal header.header-top .profile-image .outer {
+    margin: auto;
+    display: block;
+    border-radius: 100%;
+    width: 7em;
+    height: 7em;
+    background-color: #3488bf; }
+    .wrapper main #profileModal header.header-top .profile-image .outer .avatar {
+      margin: auto;
+      display: block;
+      position: absolute;
+      margin-top: 8px;
+      margin-left: 8px;
+      border: 5px solid #ffffff; }
+  .wrapper main #profileModal header.header-top .card-body {
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; }
+
+.wrapper main #profileModal section.message {
+  background-color: #3488bf; }
+  .wrapper main #profileModal section.message p.card-text {
+    font-size: 0.7em;
+    color: #ffffff; }
+
+.wrapper main #profileModal .list-group,
+.wrapper main #profileModal .card-body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8em; }
+
+.wrapper main section.chat-window-mini-info {
+  background: #ffffff;
+  color: #4a4f5a;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #ccc; }
+  .wrapper main section.chat-window-mini-info h2.name {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold; }
+  .wrapper main section.chat-window-mini-info div.subtitle {
+    font-size: 0.7em; }
+
+.wrapper main section.conversations-wrapper {
+  height: 81.2vh;
+  overflow: scroll; }
+  .wrapper main section.conversations-wrapper .chat-message {
+    min-height: 1vh;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #4a4f5a;
+    background: #ffffff; }
+    .wrapper main section.conversations-wrapper .chat-message b {
+      font-size: 0.85em; }
+    .wrapper main section.conversations-wrapper .chat-message small {
+      padding: 0;
+      color: #bec5cc; }
+    .wrapper main section.conversations-wrapper .chat-message .body {
+      font-size: 0.8em;
+      text-align: justify;
+      font-family: "Noto Sans", sans-serif;
+      font-family: "Roboto", sans-serif; }
+    .wrapper main section.conversations-wrapper .chat-message .options a {
+      font-size: 0.7em;
+      color: #bec5cc; }
+    .wrapper main section.conversations-wrapper .chat-message .options a:hover {
+      font-size: 0.7em;
+      color: #4a4f5a; }
+
+.wrapper main section.message-input-wrapper {
+  background: #ffffff;
+  width: 85vw;
+  padding: 15px;
+  bottom: 0;
+  position: fixed; }
+  .wrapper main section.message-input-wrapper .emoji-menu {
+    top: -230px; }
+
+@media (max-width: 575.98px) {
+  .wrapper header.main-header nav .logo {
+    width: 40vw; }
+    .wrapper header.main-header nav .logo span.logo-text {
+      font-size: 4vw; }
+  .wrapper header.main-header nav .search-wrapper .search {
+    width: 10rem; }
+  .wrapper header.main-header nav .search-wrapper .search-autocomplete {
+    width: 10rem; }
+  .wrapper aside .sidebar-wrapper {
+    width: 40vw;
+    height: 100%; }
+  .wrapper main section.message-input-wrapper {
+    width: 70vw; } }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wrapper header.main-header nav .logo {
+    width: 30vw; }
+    .wrapper header.main-header nav .logo span.logo-text {
+      font-size: 3vw; }
+  .wrapper header.main-header nav .search-wrapper .search {
+    width: 10rem; }
+  .wrapper header.main-header nav .search-wrapper .search-autocomplete {
+    width: 15rem; }
+  .wrapper aside .sidebar-wrapper {
+    width: 30vw; }
+  .wrapper main section.message-input-wrapper {
+    width: 70vw; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wrapper header.main-header nav .logo {
+    width: 25vw; }
+    .wrapper header.main-header nav .logo span.logo-text {
+      font-size: 2.5vw; }
+  .wrapper header.main-header nav .search-wrapper .search {
+    width: 20rem; }
+  .wrapper header.main-header nav .search-wrapper .search-autocomplete {
+    width: 20rem; }
+  .wrapper aside .sidebar-wrapper {
+    width: 25vw; }
+  .wrapper main section.message-input-wrapper {
+    width: 75vw; } }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .wrapper header.main-header nav .logo {
+    width: 20vw; }
+    .wrapper header.main-header nav .logo span.logo-text {
+      font-size: 2vw; }
+  .wrapper header.main-header nav .search-wrapper .search {
+    width: 35rem; }
+  .wrapper header.main-header nav .search-wrapper .search-autocomplete {
+    width: 35rem; }
+  .wrapper aside .sidebar-wrapper {
+    width: 20vw; }
+  .wrapper main section.message-input-wrapper {
+    width: 80vw; } }
+
+@media (min-width: 1200px) {
+  .wrapper main section.conversations-wrapper {
+    height: 83vh !important; } }
