@@ -1,4 +1,4 @@
-# User Interface for ChatZilla
+# User Interface for ChatZilla (WIP)
 HTML/CSS/JS for ChatZilla Chat App
 
 
