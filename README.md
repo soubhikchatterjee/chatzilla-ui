@@ -1,11 +1,12 @@
 # User Interface for ChatZilla
 HTML/CSS/JS for ChatZilla Chat App
 
-Step 1. Install npm dependencies
+
+### Step 1. Install npm dependencies
 
  `npm install`
 
-Step 2. Run gulp
+### Step 2. Run gulp
 
  `gulp`
  
